@@ -16,5 +16,6 @@ module.exports = api => {
       "@babel/preset-typescript",
       ["@babel/preset-env", { targets: { node: true } }],
     ],
+    plugins: [["@babel/plugin-proposal-class-properties", { loose: true }]],
   };
 };

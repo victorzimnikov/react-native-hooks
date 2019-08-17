@@ -2,7 +2,7 @@
   "include": ["src"],
   "compilerOptions": {
     "noEmit": true,
-    "lib": ["esnext"],
+    "lib": ["es2018"],
     "moduleResolution": "node",
     "strict": true,
     "noUnusedLocals": true,

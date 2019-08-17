@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { StatusBar, StatusBarAnimation, StatusBarStyle } from "react-native";
+import { Platform, StatusBar, StatusBarAnimation, StatusBarStyle } from "react-native";
 
-import { IS_IOS } from "./Constants";
+const IS_IOS = Platform.OS === "ios";
 
 export interface AppStatusBarProps {
   hidden?: boolean;

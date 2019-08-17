@@ -1,4 +1,4 @@
-import * as api from "../index";
+import * as api from "../src";
 
 it("exposes public api", () => {
   expect(api).toMatchInlineSnapshot(`

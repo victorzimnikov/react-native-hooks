@@ -1,6 +1,5 @@
 import { Keyboard } from "react-native";
 import { useEffect, useState } from "react";
-import { noop } from "./Helpers";
 
 interface KeyboardProps {
   readonly top: number;
@@ -24,8 +23,8 @@ export function useKeyboard(deps: any[] = []): KeyboardProps {
     Keyboard.addListener("keyboardDidHide", () => setShow(false));
 
     return () => {
-      Keyboard.removeListener("keyboardDidShow", noop);
-      Keyboard.removeListener("keyboardDidHide", noop);
+      Keyboard.removeListener("keyboardDidShow", () => {});
+      Keyboard.removeListener("keyboardDidHide", () => {});
     };
   }, deps);
 

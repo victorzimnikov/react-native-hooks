@@ -1,6 +1,7 @@
 {
   "name": "@victorzimnikov/react-native-hooks",
   "version": "0.0.1",
+  "repository": "https://github.com/victorzimnikov/react-native-hooks.git",
   "author": {
     "email": "victor.zimnikov@yandex.ru",
     "name": "Victor Zimnikov"
@@ -13,7 +14,8 @@
     "clear": "node ./tools/clear.js",
     "ci": "npm-run-all format lint dts",
     "lint": "eslint --quiet \"src/**/*.{tsx,ts,js}\"",
-    "format": "prettier --write \"src/**/*.{tsx,ts,js}\""
+    "format": "prettier --write \"src/**/*.{tsx,ts,js}\"",
+    "version": "npx @pika/pack"
   },
   "@pika/pack": {
     "pipeline": [

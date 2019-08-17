@@ -70,4 +70,3 @@ buck-out/
 /android/app/src/main/res/raw
 coverage/**/*
 /pkg
-/__tests__

@@ -11,8 +11,6 @@
     "test": "jest",
     "dts": "tsc --noEmit",
     "version": "npx @pika/pack",
-    "start": "react-native start",
-    "clear": "node ./tools/clear.js",
     "ci": "npm-run-all format lint dts",
     "lint": "eslint --quiet \"src/**/*.{tsx,ts,js}\"",
     "format": "prettier --write \"src/**/*.{tsx,ts,js}\""
@@ -28,6 +26,9 @@
         }
       ],
       [
+        "@pika/plugin-build-node"
+      ],
+      [
         "@pika/plugin-ts-standard-pkg",
         {
           "tsconfig": "./tsconfig.types.json"
@@ -41,9 +42,12 @@
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
     "@babel/runtime": "^7.5.5",
     "@pika/pack": "^0.5.0",
-    "@pika/plugin-build-types": "^0.6.0",
+    "@pika/plugin-build-node": "^0.6.0",
     "@pika/plugin-standard-pkg": "^0.6.0",
     "@pika/plugin-ts-standard-pkg": "^0.6.0",
     "@react-native-community/eslint-config": "^0.0.5",

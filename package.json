@@ -1,6 +1,7 @@
 {
   "name": "@victorzimnikov/react-native-hooks",
   "version": "0.0.5",
+  "description": "Hooks for React Native",
   "repository": "https://github.com/victorzimnikov/react-native-hooks.git",
   "author": {
     "email": "victor.zimnikov@yandex.ru",

@@ -6,7 +6,7 @@ interface Props {
   readonly onBack?: () => void;
 }
 
-export function useBackHandler({ prevent = true, onBack }: Props = {}) {
+export function useBackHandler({ prevent = true, onBack }: Props = {}): void {
   const handleBackPress = useCallback(() => {
     if (onBack) {
       onBack();

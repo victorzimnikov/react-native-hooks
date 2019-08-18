@@ -4,11 +4,11 @@ import { Platform, StatusBar, StatusBarAnimation, StatusBarStyle } from "react-n
 const IS_IOS = Platform.OS === "ios";
 
 export interface AppStatusBarProps {
-  hidden?: boolean;
-  translucent?: boolean;
-  backgroundColor?: string;
-  barStyle?: StatusBarStyle;
-  hideAnimation?: StatusBarAnimation;
+  readonly hidden?: boolean;
+  readonly translucent?: boolean;
+  readonly backgroundColor?: string;
+  readonly barStyle?: StatusBarStyle;
+  readonly hideAnimation?: StatusBarAnimation;
 }
 
 export function useStatusBar({
@@ -17,7 +17,7 @@ export function useStatusBar({
   hideAnimation = "fade",
   barStyle = "dark-content",
   backgroundColor = "rgba(0, 0, 0, 0)",
-}: AppStatusBarProps = {}) {
+}: AppStatusBarProps = {}): void {
   useEffect(() => {
     StatusBar.setBarStyle(barStyle);
     StatusBar.setHidden(hidden, hideAnimation);

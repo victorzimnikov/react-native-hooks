@@ -1,12 +1,11 @@
 {
   "include": ["src"],
   "compilerOptions": {
-    "noEmit": true,
+    "noEmit": false,
     "lib": ["es2018"],
     "moduleResolution": "node",
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "module": "esnext",
+    "target": "es2019",
     "allowSyntheticDefaultImports": true
   },
   "exclude": ["node_modules", "babel.config.js", "metro.config.js", "jest.config.js"]

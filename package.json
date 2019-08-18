@@ -29,10 +29,7 @@
         "@pika/plugin-build-node"
       ],
       [
-        "@pika/plugin-ts-standard-pkg",
-        {
-          "tsconfig": "./tsconfig.types.json"
-        }
+        "@pika/plugin-ts-standard-pkg"
       ]
     ]
   },
@@ -42,7 +39,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
@@ -52,20 +48,14 @@
     "@pika/plugin-standard-pkg": "^0.6.0",
     "@pika/plugin-ts-standard-pkg": "^0.6.0",
     "@react-native-community/eslint-config": "^0.0.5",
-    "@types/jest": "^24.0.17",
     "@types/react": "^16.9.2",
     "@types/react-native": "^0.60.6",
-    "@types/react-test-renderer": "^16.9.0",
-    "babel-jest": "^24.9.0",
     "eslint": "^6.1.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "jest": "^24.9.0",
-    "metro-react-native-babel-preset": "^0.56.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.18.2",
     "react": "^16.8.6",
     "react-native": "^0.60.5",
-    "react-test-renderer": "16.8.6",
     "typescript": "^3.5.3"
   }
 }

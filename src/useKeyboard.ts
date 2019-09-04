@@ -24,6 +24,9 @@ export function useKeyboard(deps: any[] = []): KeyboardProps {
       if (nativeEvent != null && nativeEvent.endCoordinates) {
         setTop(nativeEvent.endCoordinates.screenY);
         setHeight(nativeEvent.endCoordinates.height);
+      } else {
+        setTop(0);
+        setHeight(0);
       }
 
       setShow(false);

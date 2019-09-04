@@ -20,7 +20,12 @@ export function useKeyboard(deps: any[] = []): KeyboardProps {
 
       setShow(true);
     });
-    Keyboard.addListener("keyboardDidHide", () => setShow(false));
+    Keyboard.addListener("keyboardDidHide", ({ endCoordinates }) => {
+      setTop(endCoordinates.screenY);
+      setHeight(endCoordinates.height);
+
+      setShow(false);
+    });
 
     return () => {
       Keyboard.removeListener("keyboardDidShow", () => {});

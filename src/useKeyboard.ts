@@ -20,9 +20,11 @@ export function useKeyboard(deps: any[] = []): KeyboardProps {
 
       setShow(true);
     });
-    Keyboard.addListener("keyboardDidHide", ({ endCoordinates }) => {
-      setTop(endCoordinates.screenY);
-      setHeight(endCoordinates.height);
+    Keyboard.addListener("keyboardDidHide", nativeEvent => {
+      if (nativeEvent != null && nativeEvent.endCoordinates) {
+        setTop(nativeEvent.endCoordinates.screenY);
+        setHeight(nativeEvent.endCoordinates.height);
+      }
 
       setShow(false);
     });

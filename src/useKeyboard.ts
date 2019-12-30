@@ -1,5 +1,5 @@
 import { Keyboard } from "react-native";
-import { useEffect, useState } from "react";
+import { DependencyList, useEffect, useState } from "react";
 
 interface KeyboardProps {
   readonly top: number;
@@ -8,7 +8,7 @@ interface KeyboardProps {
   readonly dismiss: () => void;
 }
 
-export function useKeyboard(deps: any[] = []): KeyboardProps {
+export function useKeyboard(deps: DependencyList = []): KeyboardProps {
   const [show, setShow] = useState();
   const [top, setTop] = useState(0);
   const [height, setHeight] = useState(0);

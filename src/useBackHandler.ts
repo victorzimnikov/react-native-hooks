@@ -1,19 +1,22 @@
 import { BackHandler } from "react-native";
-import { useCallback, useEffect } from "react";
+import { DependencyList, useCallback, useEffect } from "react";
 
 interface Props {
   readonly prevent?: boolean;
   readonly onBack?: () => void;
 }
 
-export function useBackHandler({ prevent = true, onBack }: Props = {}): void {
+export function useBackHandler(
+  { prevent = true, onBack }: Props = {},
+  deps: DependencyList = [],
+): void {
   const handleBackPress = useCallback(() => {
     if (onBack) {
       onBack();
     }
 
     return prevent;
-  }, [prevent, onBack]);
+  }, deps.concat([prevent, onBack]));
 
   useEffect(() => {
     BackHandler.addEventListener("hardwareBackPress", handleBackPress);
@@ -21,5 +24,5 @@ export function useBackHandler({ prevent = true, onBack }: Props = {}): void {
     return () => {
       BackHandler.removeEventListener("hardwareBackPress", handleBackPress);
     };
-  }, []);
+  }, deps);
 }
